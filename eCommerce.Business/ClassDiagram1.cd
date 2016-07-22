@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="eCommerce.Business.Adresse">
+    <Position X="1" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAQAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Adresse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eCommerce.Business.Categorie">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Categorie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="eCommerce.Business.Client">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAAAAACAAAAAAACAAQAAAIAA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Adresse" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Commandes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="eCommerce.Business.Commande">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAIAQBAAAAQ=</HashCode>
+      <FileName>Commande.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Adresse" />
+      <Property Name="Client" />
+      <Property Name="Statut" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="LignesCommande" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="eCommerce.Business.LigneCommande">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>LigneCommande.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Produit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="eCommerce.Business.Produit">
+    <Position X="9.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAgAAAAAAIAgCAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Produit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Categorie" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="eCommerce.Business.CommandeStatut" Collapsed="true">
+    <Position X="6.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAACAAAAAAAAQAAAAAAAAAACAAAAAAAAAAIA=</HashCode>
+      <FileName>CommandeStatut.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

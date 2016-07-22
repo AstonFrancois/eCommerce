@@ -1,0 +1,48 @@
+﻿@model IEnumerable<eCommerce.Business.Produit>
+@{
+    ViewBag.Title = "Catalogue";
+}
+
+<h2>Catalogue des produits proposés à la vente :</h2>
+
+<div class="catalogue">
+    @foreach (var produit in Model)
+    {
+        <a href="/Panier/Ajouter/@produit.Id" title="Ajouter @produit.Nom à votre panier !">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(p => p.Nom)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(_ => produit.Nom)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(p => p.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(_ => produit.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(p => p.PrixUnitaire)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(_ => produit.PrixUnitaire)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(p => p.Stock)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(_ => produit.Stock)
+                </dd>
+
+            </dl>
+        </a>
+    }
+</div>

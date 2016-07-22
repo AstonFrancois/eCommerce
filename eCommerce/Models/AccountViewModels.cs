@@ -79,6 +79,13 @@ namespace eCommerce.Models
         [Display(Name = "Confirmer le mot de passe ")]
         [Compare("Password", ErrorMessage = "Le mot de passe et le mot de passe de confirmation ne correspondent pas.")]
         public string ConfirmPassword { get; set; }
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
+        public string Ligne1 { get; set; }
+        public string Ligne2 { get; set; }
+        public string CodePostal { get; set; }
+        public string Ville { get; set; }
+        public string Pays { get; set; }
     }
 
     public class ResetPasswordViewModel

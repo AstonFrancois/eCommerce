@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using eCommerce.Business;
 
 namespace eCommerce.Models
 {
@@ -13,6 +14,7 @@ namespace eCommerce.Models
         {
             // Notez qu'authenticationType doit correspondre à l'élément défini dans CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
+
             // Ajouter les revendications personnalisées de l’utilisateur ici
             return userIdentity;
         }
@@ -21,7 +23,7 @@ namespace eCommerce.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("eCommerceDB", throwIfV1Schema: false)
         {
         }
 
@@ -29,5 +31,10 @@ namespace eCommerce.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Commande> Commande { get; set; }
+        public DbSet<Produit> Produits { get; set; }
+        public DbSet<Categorie> Categories { get; set; }
     }
 }

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<eCommerce.Business.LigneCommande>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Produit.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantite)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Produit.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantite)
+        </td>
+    </tr>
+}
+
+</table>

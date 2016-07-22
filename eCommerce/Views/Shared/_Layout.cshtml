@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using eCommerce.Business
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -23,8 +24,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
-                    <li>@Html.ActionLink("À propos de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Catalogue", "Index", "Produit")</li>
+                    <li>@Html.ActionLink("Panier(" + ((Commande)Session["Panier"]).NbArticles + ")", "Index", "Panier")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
