@@ -12,9 +12,10 @@ namespace eCommerce.Controllers
     {
         public ActionResult Index()
         {
-            return View(Panier.LignesCommande);
+            return View(Panier);
         }
 
+        [HttpPost]
         public ActionResult Ajouter(int? id)
         {
             if (!id.HasValue)

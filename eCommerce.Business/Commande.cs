@@ -28,6 +28,14 @@ namespace eCommerce.Business
             }
         }
 
+        public decimal PrixTotal
+        {
+            get
+            {
+                return LignesCommande.Sum(lc => lc.Quantite * lc.Produit.PrixUnitaire);
+            }
+        }
+
         public void AjouterProduit(Produit produit, int quantite)
         {
             LigneCommande produitAlreadyHere = LignesCommande.FirstOrDefault(lc => lc.Produit.Id == produit.Id);

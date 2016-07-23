@@ -1,0 +1,36 @@
+﻿@model eCommerce.Business.Commande
+
+@{
+    ViewBag.Title = "Ma commande";
+}
+
+<h2>Ma commande</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ValidationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValidationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NbArticles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NbArticles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrixTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrixTotal)
+        </dd>
+
+    </dl>
+</div>
